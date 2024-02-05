@@ -11,8 +11,19 @@
         No criticism of the Disney trilogy except for Last Jedi
 */
 
+type Faction = 'Jedi' | 'Resistance' | 'Rebellion' | 'Knights of Ren' | 'First Order' | 'New Republic' | 'Sith' | 'Republic' | 'Empire'
+type Color = 'blue' | 'orange' | 'green' | 'red' 
 
-const characters = [
+type Characters = {
+        name: string
+        faction: Faction | Faction[]
+        episodeAppearances:number[]
+        lightsaberColor?: Color[]
+
+}
+
+
+const characters: Characters[] = [
     {
         name: 'Rey',
         faction: [ 'Jedi', 'Resistance' ],
